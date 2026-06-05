@@ -60,9 +60,6 @@ EXPO_PUBLIC_DASHSCOPE_API_KEY=你的千问_API_Key
 EXPO_PUBLIC_OPENWEATHER_API_KEY=你的_OpenWeather_Key
 ```
 
-> ⚠️ `.env` 已被 `.gitignore` 忽略，不会提交到 Git，确保 API Key 安全。
-> OpenWeather 使用免费套餐的 **5 Day / 3 Hour Forecast** 接口即可，无需付费订阅。
-
 ```bash
 # 3. 启动项目
 npm start          # Expo 开发服务器（扫码在手机上运行）
@@ -99,14 +96,11 @@ weather-helper/
 
 ```
 ┌─────────────────────┐
-│ 北京               │
-│ 明天               │
-│        ☀️          │
-│      26°C          │
-│    晴，少云        │
+│ 北京                │
+│ 明天                │
+│        ☀️           │
+│      26°C           │
+│    晴，少云          │
 └─────────────────────┘
 ```
 
-## 📄 License
-
-0BSD
