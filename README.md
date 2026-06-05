@@ -47,16 +47,21 @@ OpenWeather Forecast API → 5天/3小时预报
 npm install
 
 # 2. 配置 API Key
+cp .env.example .env
 ```
 
-打开 `App.js`，替换以下两个 API Key：
+然后编辑 `.env` 文件，填入你自己的 API Key：
 
-```js
-const DASHSCOPE_API_KEY = '你的千问_API_Key';   // 从 dashscope.console.aliyun.com 获取
-const OPENWEATHER_API_KEY = '你的_OpenWeather_Key'; // 从 openweathermap.org 获取
+```env
+# 千问 DashScope API Key（从 https://dashscope.console.aliyun.com/ 获取）
+EXPO_PUBLIC_DASHSCOPE_API_KEY=你的千问_API_Key
+
+# OpenWeather API Key（从 https://openweathermap.org/ 获取，免费套餐即可）
+EXPO_PUBLIC_OPENWEATHER_API_KEY=你的_OpenWeather_Key
 ```
 
-> ⚠️ OpenWeather 使用免费套餐的 **5 Day / 3 Hour Forecast** 接口即可，无需付费订阅。
+> ⚠️ `.env` 已被 `.gitignore` 忽略，不会提交到 Git，确保 API Key 安全。
+> OpenWeather 使用免费套餐的 **5 Day / 3 Hour Forecast** 接口即可，无需付费订阅。
 
 ```bash
 # 3. 启动项目
@@ -80,6 +85,7 @@ weather-helper/
 ├── index.js                    # 入口文件
 ├── app.json                    # Expo 配置
 ├── package.json                # 依赖与脚本
+├── .env.example                # API Key 配置模板
 ├── components/
 │   ├── Header.js               # 顶部标题栏
 │   ├── Footer.js               # 底部版权信息
